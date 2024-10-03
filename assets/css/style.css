@@ -130,7 +130,7 @@ aside{
 aside h1{
     font-weight: 700;
     color: var(--AlmostBlack);
-    font-size:25px;
+    font-size:30px;
     line-height: 1.4;
 }
 aside p{
@@ -201,7 +201,7 @@ article{
     aside h1{
         font-weight: 700;
         color: var(--AlmostBlack);
-        font-size:60px;
+        font-size:50px;
         max-width:360px;  
     }
     aside p{
