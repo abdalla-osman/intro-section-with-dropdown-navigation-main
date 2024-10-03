@@ -1,0 +1,226 @@
+:root{
+--Almost-White: hsl(0, 0%, 98%);
+--MediumGray: hsl(0, 0%, 41%);
+--AlmostBlack: hsl(0, 0%, 8%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Epilogue", sans-serif;
+}
+p{
+    font-size: 18px;
+}
+.btn-navbar{
+    cursor: pointer;
+}
+.offcanvas{
+    width: 70%;
+}
+.nav-link.dropdown-toggle::after{
+    display: none;
+}
+.nav-link:is(:hover,:active,:focus,:focus-visible,:focus-within){
+    color: var(--MediumGray);
+}
+.nav-link{
+    font-weight:600;
+    padding: .5rem 1rem;
+    color: var(--MediumGray);
+}
+.dropdown-menu{
+    border: none;
+    z-index: 0;
+    position: relative !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    transform: translate3d(0px, 0px, 0px)!important;
+}
+.dropdown-menu .dropdown-item:hover{
+    background: transparent;
+}
+.dropdown-menu .dropdown-item{
+    margin-bottom: 10px;
+}
+.dropdown-menu span{
+    font-weight: 500;
+    color:var(--MediumGray)
+}
+form a{
+    display: block;
+    width:100%;
+    color: var(--MediumGray);
+    font-weight: 400;
+    font-size: 14px;
+    border-radius:1rem !important;
+}
+form .btn{
+    outline: none !important;
+}
+form .btn:is(:hover,:active,:focus,:focus-visible,:focus-within){
+    box-shadow: none !important;
+}
+.register{
+    border: 2px solid var(--MediumGray);
+}
+@media (min-width:768px) {
+    .offcanvas{
+        visibility: visible !important;
+        position: static !important; 
+        flex: 1;
+    }    
+    .offcanvas-end {
+        border-left:none !important;
+        transform: translateX(0%) !important;
+    }
+    .offcanvas-body {
+        padding:0; 
+        padding-left: 1.4rem;
+    }
+    form{
+        padding: 0;
+    }
+    .nav-link{
+        margin-right: 15px;
+    }
+    .dropdown-menu{
+        border: 1PX solid #DDD;
+        z-index: 1000;
+        position: fixed !important;
+        inset: 0px auto auto 0px !important;
+        margin: 0px !important;
+        transform: translate3d(0px, 45px, 0px)!important;
+        box-shadow:0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+    }
+    form{
+        margin-left: auto;
+        justify-content: end;
+    }
+    form a{
+        display: inline;
+        width: fit-content;
+    }
+    .dropdown-menu.lastdorp{
+        transform: translate3d(112px, 45px, 17px)!important;
+    }
+    .nav-link:is(:hover,:active,:focus,:focus-visible,:focus-within),
+    form button:is(:hover,:active,:focus,:focus-visible,:focus-within){
+        color: var(--AlmostBlack) !important;
+    }
+    .register:hover{
+        border-color:var(--AlmostBlack) ;
+    }
+
+}
+main .container .row{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;  
+}
+aside{
+    position: relative;
+    margin-top: 10px !important;
+    text-align: center;
+}
+aside h1{
+    font-weight: 700;
+    color: var(--AlmostBlack);
+    font-size:30px;
+    line-height: 1.4;
+}
+aside p{
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--MediumGray);
+    font-size: 15px;
+}
+aside .btn{
+    border-radius:.6rem !important;
+    font-weight: 700;
+    color: var(--Almost-White);
+    padding-left:15px;
+    padding-right: 15px;
+    border: 2px solid #1c1f23;
+}
+aside .btn:hover{
+    background-color: transparent;
+    color: var(--AlmostBlack);
+    border-color: var(--MediumGray);
+}
+aside ul li a img{
+    width: 60px;
+}
+article{
+    background-image: url(../images/image-hero-mobile.png);
+    height: 287px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+@media (min-width:768px){
+    main .container .row{
+        gap: 10px;
+    }
+  
+    article{
+        background-image: url(../images/image-hero-desktop.png);
+        height:500px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center
+    }
+    aside ul{
+        position: relative;
+        bottom: -100px;
+    }
+
+}
+
+@media (min-width:992px){
+    main .container .row{
+        gap:0px;
+        padding: 10px 80px;
+    }
+    article{
+        background-image: url(../images/image-hero-desktop.png);
+        height:500px;
+    }
+    aside{
+      
+        margin-top:0px !important;
+        text-align: left;
+        height: 500px;
+    }
+    aside h1{
+        font-weight: 700;
+        color: var(--AlmostBlack);
+        font-size:60px;
+        max-width:360px;  
+    }
+    aside p{
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--MediumGray);
+        max-width: 380px;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    aside ul{
+        width:100%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+footer{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
