@@ -184,6 +184,10 @@ article{
 }
 
 @media (min-width:992px){
+    main{
+        padding-top:150px;
+
+    }
     main .container .row{
         gap:0px;
         padding: 10px 80px;
