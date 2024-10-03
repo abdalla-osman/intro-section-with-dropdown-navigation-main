@@ -201,8 +201,8 @@ article{
     aside h1{
         font-weight: 700;
         color: var(--AlmostBlack);
-        font-size:50px;
-        max-width:390px;  
+        font-size:60px;
+        max-width:360px;  
     }
     aside p{
         font-weight: 500;
